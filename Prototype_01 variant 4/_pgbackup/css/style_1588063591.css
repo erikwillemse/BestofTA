@@ -1,0 +1,189 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+}
+
+header {
+    grid-template-columns: [poster-start] 1fr minmax(300px, 900px) 1fr [poster-end];
+    grid-template-rows: [poster-start] auto [poster-end] auto auto auto auto;
+    grid-template-areas: 'hero-label . hero-source' '. hero-heading .' '. hero-intro .' '. hero-credits .' '. . .';
+    display: grid;
+}
+
+img.poster {
+    object-fit: cover;
+    z-index: -1;
+    grid-area: poster;
+    min-height: 640px;
+    width: 100%;
+}
+
+heading {
+    grid-area: hero-heading;
+}
+
+heading h1 {
+    color: #000000;
+    font-size: 4em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+heading h1 span {
+    font-weight: 700;
+    display: block;
+}
+
+intro {
+    grid-area: hero-intro;
+}
+
+intro p {
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+credits {
+    grid-area: hero-credits;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+credits p {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+credits p span.text {
+    text-decoration: none;
+    position: relative;
+}
+
+credits p span.text::before {
+    content: "Tekst ";
+    font-weight: normal;
+}
+
+credits p span.text::after {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    height: 5px;
+    background: black;
+    width: 100%;
+}
+
+credits p span.illustrations::before {
+    content: "Illustraties ";
+    font-weight: normal;
+}
+
+.article-type {
+    grid-area: hero-label;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-top: 50px;
+    margin-left: 50px;
+    margin-top: 0px;
+    text-align: center;
+    background: #463e8d;
+    height: 30px;
+    width: 150px;
+    position: relative;
+}
+
+.article-type::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background: #463e8d;
+    width: 150px;
+    height: 40px;
+
+    /* The points are: (left top: x y, right top: x y, center bottom: x y) */
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.article-source {
+    grid-area: hero-source;
+    writing-mode: vertical-rl;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-top: 25px;
+}
+
+.article-source span {
+    font-weight: 300;
+}
+
+article.post {
+    display: grid;
+    margin: 100px auto;
+    grid-template-columns: 2fr 12fr 6fr;
+    grid-gap: 10px 50px;
+}
+
+article.post > * {
+    grid-column: 2 / -2;
+}
+
+article.post h4 {
+    font-size: 1.2em;
+}
+
+article.post h4.tip {
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+article.post h4.tip::before {
+    content: 'tip';
+    content: 'tip';
+    color: #fff;
+    background: #463e8d;
+    padding: 6px 12px;
+}
+
+article p {
+    font-size: 1.1em;
+}
+
+article p:first-child:first-letter {
+    float: left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.1em;
+    line-height: 50px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+div.tip-right {
+    grid-column: span 1 / -1;
+    width: 80%;
+}
+
+img.screenshot {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+p.caption {
+    font-size: 0.8em;
+}
+

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;1,700&display=swap')
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    grid-template-columns: [poster-start] 1fr minmax(300px, 800px) 1fr [poster-end];
+    grid-template-rows: [poster-start] 60vh [poster-end] auto auto auto auto;
+    grid-template-areas: '. . .' '. heading .' '. intro .' '. credits .' '. . .';
+}
+
+img.poster {
+    object-fit: cover;
+    z-index: -1;
+    grid-area: poster / poster / poster / poster;
+}
+
+heading {
+    grid-area: heading;
+}
+
+heading h1 {
+    color: #000000;
+    font-size: 4em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+heading h1 span {
+    font-weight: 700;
+    display: block;
+}
+
+intro {
+    grid-area: intro;
+}
+
+intro p {
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 5px;
+}
+
+credits {
+    grid-area: credits;
+}
+
+credits p {
+    font-weight: bold;
+    text-align: center;
+}
+
+credits p.text {
+    text-decoration: overline 1px solid #000;
+    padding-top: 10px;
+}
+
+credits p.text::before {
+    content: "Tekst ";
+    font-weight: normal;
+}
+
+credits p.illustrations::before {
+    content: "Illustraties ";
+    font-weight: normal;
+}
