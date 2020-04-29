@@ -11,11 +11,31 @@ body {
     margin: 0px;
 }
 
-header {
-    grid-template-columns: [poster-start] 1fr minmax(300px, 900px) 1fr [poster-end];
-    grid-template-rows: [poster-start] auto [poster-end] auto auto auto auto;
-    grid-template-areas: 'hero-label . hero-source' '. hero-heading .' '. hero-intro .' '. hero-credits .' '. . .';
-    display: grid;
+@media (max-width:575px) {
+    header {
+        grid-template-columns: [poster-start] 1fr minmax(300px, 900px) 1fr [poster-end];
+        grid-template-rows: [poster-start] auto [poster-end] auto auto auto auto;
+        grid-template-areas: 'hero-label . hero-source' 'hero-heading hero-heading hero-heading' 'hero-intro hero-intro hero-intro' 'hero-credits hero-credits hero-credits' '. . .';
+        display: grid;
+    }
+}
+
+@media (min-width:576px) {
+    header {
+        grid-template-columns: [poster-start] 1fr minmax(300px, 900px) 1fr [poster-end];
+        grid-template-rows: [poster-start] auto [poster-end] auto auto auto auto;
+        grid-template-areas: 'hero-label . hero-source' 'hero-heading hero-heading hero-heading' 'hero-intro hero-intro hero-intro' 'hero-credits hero-credits hero-credits' '. . .';
+        display: grid;
+    }
+}
+
+@media (min-width:992px) {
+    header {
+        grid-template-columns: [poster-start] 1fr minmax(300px, 900px) 1fr [poster-end];
+        grid-template-rows: [poster-start] auto [poster-end] auto auto auto auto;
+        grid-template-areas: 'hero-label . hero-source' '. hero-heading .' '. hero-intro .' '. hero-credits .' '. . .';
+        display: grid;
+    }
 }
 
 img.poster {
@@ -138,11 +158,22 @@ credits p span.illustrations::before {
     font-weight: 300;
 }
 
-article.post {
-    display: grid;
-    margin: 100px auto;
-    grid-template-columns: 2fr 12fr 6fr;
-    grid-gap: 5px 30px;
+@media (min-width:576px) {
+    article.post {
+        display: grid;
+        margin: 100px auto;
+        grid-template-columns: 1fr;
+        grid-gap: 5px 30px;
+    }
+}
+
+@media (min-width:992px) {
+    article.post {
+        display: grid;
+        margin: 100px auto;
+        grid-template-columns: 2fr 12fr 6fr;
+        grid-gap: 5px 30px;
+    }
 }
 
 article.post > * {
