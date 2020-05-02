@@ -8,7 +8,30 @@
   <script src="https://cdn.tiny.cloud/1/3dgyfdj0nx8oe4o6ap68cm3nujxlf4gbeehpx7eobdso6xki/tinymce/5/tinymce.min.js" referrerpolicy="origin"/></script>
   <script>
     tinymce.init({
-        selector: '#mytextarea'
+        selector: '#mytextarea',
+        max_height: 500,
+        max_width: 500,
+        min_height: 300,
+        min_width: 400,
+        plugins: [
+          'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+          'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+          'table emoticons template paste help'
+        ],
+        toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | ' +
+          'bullist numlist outdent indent | link image | print preview media fullpage | ' +
+          'forecolor backcolor emoticons | help',
+        menu: {
+          favs: {title: 'TA', items: 'code visualaid | searchreplace | spellchecker | emoticons'}
+        },
+        menubar: 'favs file edit view insert format tools table help',
+        skin: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "oxide-dark" : ""),
+        content_css: (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : ""),
+        templates: [
+            {title: 'Some title 1', description: 'Some desc 1', content: 'My content'},
+            {title: 'Some title 2', description: 'Some desc 2', content: '<div class="title"><h1><span class="emphasised">Emphasised</span> title</h1></div>'}
+        ]
+
     });
   </script>
 
