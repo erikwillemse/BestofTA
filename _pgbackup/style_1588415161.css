@@ -1,44 +1,25 @@
-html {
-    font-family: "Lucida Console", Courier, monospace;
-}
-
-div.hero,
-div.tiny {
+div.hero {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 400px);
-    grid-gap: 10px;
-    grid-auto-rows: 140px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
 }
 
 p.info {
     margin: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: smaller;
     margin-bottom: 40px;
     width: 200px;
 }
 
-.prototype .button {
+.button {
+    font-family: "Lucida Console", Courier, monospace;
     font-weight: bold;
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     background: #ed3330;
-    padding: 20px;
-    border-radius: 5px;
-    display: block;
-    border: none;
-    width: 200px;
-    transition: all 0.4s ease 0s;
-}
-
-.prototype_tiny .button {
-    font-weight: bold;
-    color: #fff !important;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    background: #4522A2;
     padding: 20px;
     border-radius: 5px;
     display: block;

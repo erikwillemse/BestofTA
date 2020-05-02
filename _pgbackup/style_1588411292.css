@@ -1,23 +1,13 @@
-html {
-    font-family: "Lucida Console", Courier, monospace;
-}
-
-div.hero,
-div.tiny {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 400px);
-    grid-gap: 10px;
-    grid-auto-rows: 140px;
-}
-
 p.info {
     margin: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: smaller;
     margin-bottom: 40px;
     width: 200px;
 }
 
-.prototype .button {
+.button {
+    font-family: "Lucida Console", Courier, monospace;
     font-weight: bold;
     color: #fff !important;
     text-transform: uppercase;
@@ -25,21 +15,7 @@ p.info {
     text-align: center;
     background: #ed3330;
     padding: 20px;
-    border-radius: 5px;
-    display: block;
-    border: none;
-    width: 200px;
-    transition: all 0.4s ease 0s;
-}
-
-.prototype_tiny .button {
-    font-weight: bold;
-    color: #fff !important;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    background: #4522A2;
-    padding: 20px;
+    margin: 20px 0px 5px 20px;
     border-radius: 5px;
     display: block;
     border: none;
@@ -53,4 +29,14 @@ p.info {
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
+}
+
+div.prototype {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+div.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px;
 }
