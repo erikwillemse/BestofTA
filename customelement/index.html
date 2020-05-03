@@ -66,14 +66,22 @@
         editor = tinymce.init({
           selector: "#editor",
           height: config.heightInPx,
-          menubar: false,
+          menubar: 'favs file edit view insert format tools table help',
           plugins: [
-            "advlist autolink lists link image charmap print preview anchor",
-            "searchreplace visualblocks code fullscreen",
-            "insertdatetime media table paste code help wordcount"
+          'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+          'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+          'table emoticons template paste help'
           ],
-          toolbar:
-            "undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help",
+          toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | ' +
+          'bullist numlist outdent indent | link image | print preview media fullpage | ' +
+          'forecolor backcolor emoticons | help',
+          menu: {
+          favs: {title: 'TA', items: 'code visualaid | searchreplace | spellchecker | emoticons'}
+          },
+          templates: [
+            {title: 'Some title 1', description: 'Some desc 1', content: 'My content'},
+            {title: 'Some title 2', description: 'Some desc 2', content: '<div class="title"><h1><span class="emphasised">Emphasised</span> title</h1></div>'}
+          ],
           tinycomments_mode: "embedded",
           setup: function(editor) {
             // updates Kentico Cloud element value on certain actions
