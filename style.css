@@ -3,6 +3,7 @@ html {
 }
 
 div.hero,
+div.hero2,
 div.tiny {
     display: grid;
     grid-template-columns: repeat(auto-fit, 300px);
@@ -32,6 +33,21 @@ p.info {
     transition: all 0.4s ease 0s;
 }
 
+.prototype2 .button {
+    font-weight: bold;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    background: rgb(12, 133, 22);
+    padding: 20px;
+    border-radius: 5px;
+    display: block;
+    border: none;
+    width: 80%;
+    transition: all 0.4s ease 0s;
+}
+
 .prototype_tiny .button {
     font-weight: bold;
     color: #fff !important;
@@ -49,8 +65,8 @@ p.info {
 
 .button:hover {
     background: #434343;
-    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
     transition: all 0.4s ease 0s;
 }

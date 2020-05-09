@@ -1,0 +1,16 @@
+/* generic styles */
+
+
+/* -------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,600;1,700&display=swap');
+:root {
+    --main-support-color: #463e8d;
+    --sec-support-color: #c1bdde;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+}
