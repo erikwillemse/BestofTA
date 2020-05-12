@@ -1,0 +1,74 @@
+/* generic styles */
+/* -------------- */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,600;1,700&display=swap');
+
+:root {
+    --main-support-color: #463e8d;
+    --sec-support-color: #c1bdde;
+    --hero-video-background-display: none;
+
+    /* block or none */
+    --hero-image-background-display: block;
+
+    /* block or none */
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* header logo and hamburger navigation */
+/* ------------------------------------ */
+/* (based on headroom.js) */
+header {
+}
+
+.headroom {
+    will-change: transform;
+    transition: transform .7s cubic-bezier(.165,.84,.44,1),background .3s cubic-bezier(.165,.84,.44,1);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: auto;
+}
+
+.headroom--pinned {
+    transform: translateY(0);
+}
+
+.headroom--pinned.headroom--not-top {
+    border-bottom: 1px solid hsla(0, 0%, 61%, .5);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+.headroom--unpinned.headroom--not-top .hamburger-inner,
+.headroom--unpinned.headroom--not-top .logo .mmt-logo {
+    opacity: 0;
+}
+
+.headroom--not-top {
+    bottom: auto;
+    background: hsla(0, 0%, 100%, .95);
+}
+
+.headroom--not-top svg.mmt-logo .st1 {
+    fill: hsla(0, 0%, 61%, .6);
+}
+
+.headroom--not-top svg.mmt-logo .st0 {
+    fill: #e2231a;
+}
+
+.headroom--not-top .hamburger-inner,
+.headroom--not-top .hamburger-inner:after,
+.headroom--not-top .hamburger-inner:before {
+    background-color: rgba(74, 74, 74, .7);
+}

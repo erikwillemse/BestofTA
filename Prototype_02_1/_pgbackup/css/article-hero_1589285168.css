@@ -24,7 +24,7 @@ section#hero {
     width: 100%;
 }
 
-#article-background picture#hero-image .poster {
+#article-background figure#hero-image img.poster {
     object-fit: cover;
     z-index: -1;
 }
@@ -32,7 +32,7 @@ section#hero {
 /* hero headings */
 #article-heading {
     grid-area: hero-heading;
-    padding: 180px 40px 40px 40px;
+    padding: 80px 40px 40px 40px;
 }
 
 #article-heading h1 {

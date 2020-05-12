@@ -13,7 +13,7 @@ section#hero {
     display: var(--hero-video-background-display);
 }
 
-#article-background picture {
+#article-background figure {
     display: var(--hero-image-background-display);
     margin: 0;
 }

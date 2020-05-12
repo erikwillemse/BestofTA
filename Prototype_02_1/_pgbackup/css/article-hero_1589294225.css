@@ -22,9 +22,10 @@ section#hero {
     grid-area: poster;
     min-height: 640px;
     width: 100%;
+    overflow: none;
 }
 
-#article-background picture#hero-image .poster {
+#article-background picture#hero-image {
     object-fit: cover;
     z-index: -1;
 }

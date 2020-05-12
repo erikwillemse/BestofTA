@@ -1,0 +1,44 @@
+/* generic styles */
+/* -------------- */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,600;1,700&display=swap');
+
+:root {
+    --main-support-color: #463e8d;
+    --sec-support-color: #c1bdde;
+    --hero-video-background-display: none;
+
+    /* block or none */
+    --hero-image-background-display: block;
+
+    /* block or none */
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* header logo and hamburger navigation */
+header {
+}
+
+.headroom {
+    will-change: transform;
+    transition: transform .7s cubic-bezier(.165,.84,.44,1),background .3s cubic-bezier(.165,.84,.44,1);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: auto;
+}
+
+.headroom--pinned {
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    transform: translateY(-100%);
+}

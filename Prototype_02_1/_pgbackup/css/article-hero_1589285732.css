@@ -22,9 +22,10 @@ section#hero {
     grid-area: poster;
     min-height: 640px;
     width: 100%;
+    overflow: none;
 }
 
-#article-background picture#hero-image .poster {
+#article-background figure#hero-image img.poster {
     object-fit: cover;
     z-index: -1;
 }
@@ -32,7 +33,7 @@ section#hero {
 /* hero headings */
 #article-heading {
     grid-area: hero-heading;
-    padding: 180px 40px 40px 40px;
+    padding: 80px 40px 40px 40px;
 }
 
 #article-heading h1 {

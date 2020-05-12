@@ -10,27 +10,46 @@
         <link href="css/article-generic.css" rel="stylesheet">
         <link href="css/article-hero.css" rel="stylesheet">
         <link href="css/article-details.css" rel="stylesheet">
-        <style>
-            /* custom css */
-            h1 { animation: colorchange 10s infinite alternate; } 
-            @keyframes colorchange { 0% {  color: blue; }  10% {  color: #8e44ad; }  20% {  color: #1abc9c; }  30% {  color: #d35400; }  40% {  color: blue; }  50% {  color: #34495e; }  60% {  color: blue; }  70% {  color: #2980b9; }  80% {  color: #f1c40f; }  90% {  color: #2980b9; }  100% {  color: pink; } }
-        </style>
+        <style>/* custom css */h1 { animation: colorchange 10s infinite alternate; } @keyframes colorchange { 0% {  color: blue; }  10% {  color: #8e44ad; }  20% {  color: #1abc9c; }  30% {  color: #d35400; }  40% {  color: blue; }  50% {  color: #34495e; }  60% {  color: blue; }  70% {  color: #2980b9; }  80% {  color: #f1c40f; }  90% {  color: #2980b9; }  100% {  color: pink; } }</style>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script>
+            var elem = document.querySelector('.main-carousel');
+            var flkty = new Flickity( elem, {
+              // options
+              cellAlign: 'left',
+              contain: true
+            });
+
+            // element argument can be a selector string
+            //   for an individual element
+            var flkty = new Flickity( '.main-carousel', {
+              // options
+            });
+        </script>
     </head>
     <body>
         <!-- Changed the structure to semantic HTML //-->
         <!-- header element will contain logo in a figure element and page navigation - future version  //-->
-        <header class="headroom">
-            <a href="https://www.test-aankoop.be/"> <img class="logo" src="https://www.test-aankoop.be/-/media/ta/mobile/ta%20-%20logo%20(circle).jpg" alt="Test Aankoop logo"> </a>
-            <div id="main-navigation" class="menu-overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <div class="overlay-content">
-                    <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Clients</a>
-                    <a href="#">Contact</a>
+        <header>
+            <a href="/" class="logo">test</a>
+            <nav class="main-menu-nav">
+                <div class="main-menu overlay">
+                    <a href="/" class="logo">test</a>
+                    <ul class="main-menu-list">
+                        <li class="main-menu-list-item" style="transition-delay: 0.315s;">
+                            <a href="#" title="link 1">link 1</a>
+                        </li>
+                        <li class="main-menu-list-item" style="transition-delay: 0.3s;">
+                            <a href="/work" title="link 2">link 2</a>
+                        </li>
+                        <li class="main-menu-list-item" style="transition-delay: 0.27s;">
+                            <a href="/about" title="link 3">link 3</a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <a class="hamburger hamburger--slider" href="#" tabindex="2" nclick="openNav()"> <span class="hamburger-box"> <span class="hamburger-inner"></span> </span> </a> 
+                <a class="hamburger hamburger--slider" href="#" tabindex="2"> <span class="hamburger-box"> <span class="hamburger-inner"></span> </span> </a>
+            </nav>             
         </header>
         <!-- main element contains the actual article content, within the article element we use sections to simplify the structure //-->
         <main>
@@ -54,10 +73,10 @@
                         <p><span>Test</span> Connect</p>
                     </div>                     
                     <div id="article-background">
-                        <picture id="hero-image">
+                        <picture>
                             <source media="(max-width: 799px)" srcset="images/hero1_1080x1920.jpg">
                             <source media="(min-width: 800px)" srcset="images/hero1_1920x1080.jpg">
-                            <img class="poster" src="images/hero1_1920x640.jpg" alt="hero background image"/>
+                            <img src="images/hero1_1920x640.jpg" alt="hero background image"/>
                         </picture>
                         <video autoplay muted loop id="hero-video">
                             <source type="video/mp4" src="https://mmt-cdn-prod-media-01.azureedge.net/mediacontainer/medialibraries/mmtdigital/mmtdigital/about/mmt-about-movie.mp4">
@@ -159,23 +178,5 @@
                 </section>
             </article>
         </main>
-        <script src="https://unpkg.com/headroom.js"></script>
-        <script>
-            // headroom.js from https://wicky.nillia.ms/headroom.js/
-            const header = document.querySelector("header");
-            const headroom = new Headroom(header);
-            headroom.init();
-        </script>
-        <script>
-			(function (a, d, o, r, i, c, u, p, w, m) {
-            m = d.getElementsByTagName(o)[0], a[c] = a[c]
-            || {}, a[c].trigger = a[c].trigger || function () {
-            (a[c].trigger.arg = a[c].trigger.arg || []).push(arguments)},
-            a[c].on = a[c].on || function () {(a[c].on.arg = a[c].on.arg || []).push(arguments)},
-            a[c].off = a[c].off || function () {(a[c].off.arg = a[c].off.arg || []).push(arguments)
-            }, w = d.createElement(o), w.id = i, w.src = r, w.async = 1, w.setAttribute(p, u),
-            m.parentNode.insertBefore(w, m), w = null}
-            )(window, document, "script", "https://99147497.adoric-om.com/adoric.js", "Adoric_Script", "adoric","957822f3029f63b59d21bc1c25156a96", "data-key");
-            </script>
     </body>
 </html>
