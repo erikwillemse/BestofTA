@@ -20,12 +20,12 @@ section#hero {
 
 #article-background {
     grid-area: poster;
-    min-height: 640px;
-    width: 100%;
 }
 
 #article-background picture#hero-image .poster {
     object-fit: cover;
+    min-height: 640px;
+    width: 100%;
     z-index: -1;
 }
 
