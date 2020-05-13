@@ -5,10 +5,10 @@
 :root {
     --main-support-color: #463e8d;
     --sec-support-color: #c1bdde;
-    --hero-video-background-display: none;
+    --hero-video-background-display: block;
 
     /* block or none */
-    --hero-image-background-display: block;
+    --hero-image-background-display: none;
 
     /* block or none */
 }
@@ -26,10 +26,6 @@ body {
 header {
     height: 100px;
     background: transparent;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 100px;
-    grid-template-areas: 'logo . hamburger';
 }
 
 img.logo {
