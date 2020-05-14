@@ -1,4 +1,4 @@
-/* hero header styles */
+/* hero styles */
 /* -------------- */
 /* hero grid settings */
 section#hero {
@@ -13,26 +13,26 @@ section#hero {
     display: var(--hero-video-background-display);
 }
 
-#article-background figure {
+#article-background picture {
     display: var(--hero-image-background-display);
     margin: 0;
 }
 
 #article-background {
     grid-area: poster;
-    min-height: 640px;
-    width: 100%;
 }
 
-#article-background figure#hero-image img.poster {
+#article-background picture#hero-image .poster {
     object-fit: cover;
+    min-height: 640px;
+    width: 100%;
     z-index: -1;
 }
 
 /* hero headings */
 #article-heading {
     grid-area: hero-heading;
-    padding: 80px 40px 40px 40px;
+    padding: 180px 40px 40px 40px;
 }
 
 #article-heading h1 {
@@ -103,7 +103,7 @@ section#hero {
     top: -12px;
     left: 0;
     height: 5px;
-    background: black;
+    background: #000000;
     width: 100%;
 }
 
@@ -113,11 +113,11 @@ section#hero {
 }
 
 /* hero meta-information */
-#article-meta {
+#article-meta-type {
     grid-area: hero-label;
 }
 
-.article-type {
+#article-meta-type p {
     font-family: 'Josefin Sans', sans-serif;
     color: #ffffff;
     font-weight: 700;
@@ -133,7 +133,7 @@ section#hero {
     position: relative;
 }
 
-.article-type::after {
+#article-meta-type p::after {
     content: '';
     position: absolute;
     top: 100%;
@@ -146,8 +146,13 @@ section#hero {
     clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
 
-.article-source {
+#article-meta-source {
     grid-area: hero-source;
+    justify-self: end;
+    z-index: 999;
+}
+
+#article-meta-source p {
     writing-mode: vertical-rl;
     font-family: 'Josefin Sans', sans-serif;
     color: #ffffff;
@@ -155,8 +160,9 @@ section#hero {
     font-size: 15px;
     text-transform: uppercase;
     padding-top: 25px;
+    min-height: 200px;
 }
 
-.article-source span {
+#article-meta-source p span {
     font-weight: 300;
 }

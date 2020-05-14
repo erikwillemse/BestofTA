@@ -10,11 +10,8 @@
         <link href="css/article-generic.css" rel="stylesheet">
         <link href="css/article-hero.css" rel="stylesheet">
         <link href="css/article-details.css" rel="stylesheet">
-        <style>
-            /* custom css */
-            h1 { animation: colorchange 10s infinite alternate; } 
-            @keyframes colorchange { 0% {  color: blue; }  10% {  color: #8e44ad; }  20% {  color: #1abc9c; }  30% {  color: #d35400; }  40% {  color: blue; }  50% {  color: #34495e; }  60% {  color: blue; }  70% {  color: #2980b9; }  80% {  color: #f1c40f; }  90% {  color: #2980b9; }  100% {  color: pink; } }
-        </style>
+        <style>/* custom css *//* h1 { animation: colorchange 10s infinite alternate; } 
+            @keyframes colorchange { 0% {  color: blue; }  10% {  color: #8e44ad; }  20% {  color: #1abc9c; }  30% {  color: #d35400; }  40% {  color: blue; }  50% {  color: #34495e; }  60% {  color: blue; }  70% {  color: #2980b9; }  80% {  color: #f1c40f; }  90% {  color: #2980b9; }  100% {  color: pink; } } */</style>
     </head>
     <body>
         <!-- Changed the structure to semantic HTML //-->
@@ -43,10 +40,7 @@
                     <div id="article-intro">
                         <p>Na jaren trouwe dienst, begint je computer kennelijk tekenen van vermoeidheid te vertonen. Stel je vast dat hij trager werkt of dat het opstarten bijzonder langzaam verloopt? Dit zijn onze tips om je computer nieuw leven in te blazen.</p>
                     </div>
-                    <div id="article-credits">
-                        <p class="text">Louis Darms - Philippe Lecocq - Tom Thysen</p>
-                        <p class="illustrations">Annelien Smet</p>
-                    </div>                     
+                    <p id="article-credits"> <span class="text">Louis Darms - Philippe Lecocq - Tom Thysen</span> <span class="illustrations">Annelien Smet</span> </p> 
                     <div id="article-meta-type">
                         <p>Advies</p>
                     </div>
@@ -56,7 +50,7 @@
                     <div id="article-background">
                         <picture id="hero-image">
                             <source media="(max-width: 799px)" srcset="images/hero1_1080x1920.jpg">
-                            <source media="(min-width: 800px)" srcset="images/hero1_1920x1080.jpg">
+                            <source media="(min-width: 800px)" srcset="images/hero1_1920x640.jpg">
                             <img class="poster" src="images/hero1_1920x640.jpg" alt="hero background image"/>
                         </picture>
                         <video autoplay muted loop id="hero-video">

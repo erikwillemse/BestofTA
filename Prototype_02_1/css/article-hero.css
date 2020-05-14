@@ -80,35 +80,39 @@ section#hero {
     padding: 0 40px;
 }
 
-#article-credits p {
+#article-credits span {
     font-weight: bold;
     text-align: left;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-#article-credits p.text {
+#article-credits span.text {
     text-decoration: none;
     position: relative;
 }
 
-#article-credits p.text::before {
-    content: "Tekst ";
+#article-credits span.text::before {
+    content: var(--credits-text);
     font-weight: normal;
 }
 
-#article-credits::before {
+#article-credits span.text::after {
     content: '';
     position: absolute;
     top: -12px;
     left: 0;
     height: 5px;
-    background: black;
+    background: #000000;
     width: 100%;
 }
 
-#article-credits p.illustrations::before {
-    content: "Illustraties ";
+#article-credits span.illustrations {
+    display: block;
+}
+
+#article-credits span.illustrations::before {
+    content: var(--credits-illustrations);
     font-weight: normal;
 }
 
