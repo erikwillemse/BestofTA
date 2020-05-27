@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Test Connect - Verjongingskuur voor je computer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/article-generic.css" rel="stylesheet">
+    <style>
+        /* based on https://codepen.io/balazs_sziklai/pen/mOwoLg */
+        
+        body {
+            max-width: 1280px;
+            margin: auto;
+            font-family: sans-serif;
+            background-color: #fff;
+        }
+        
+        main {
+            margin-top: 100px;
+        }
+        
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            grid-gap: 10px;
+            grid-auto-rows: minmax(280px, auto);
+            grid-auto-flow: dense;
+            padding: 10px;
+        }
+        
+        .grid-item {
+            padding: 1rem;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #929796;
+            background-color: #333;
+            border-radius: 5px;
+        }
+        
+        .grid-item:nth-child(odd) {
+            background-color: #424242;
+        }
+        
+        .span-2 {
+            grid-column-end: span 2;
+            grid-row-end: span 2;
+        }
+        
+        .span-3 {
+            grid-column-end: span 3;
+            grid-row-end: span 4;
+        }
+        
+        a,
+        a:visited {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body data-barba="wrapper">
+    <header class="headroom">
+        <a href="https://www.test-aankoop.be/"> <img class="logo" src="https://www.test-aankoop.be/-/media/ta/mobile/ta%20-%20logo%20(circle).jpg" alt="Test Aankoop logo"> </a>
+        <div id="main-navigation" class="menu-overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <a class="hamburger hamburger--slider" href="#" tabindex="2" nclick="openNav()"> <span class="hamburger-box"> <span class="hamburger-inner"></span> </span>
+        </a>
+    </header>
+    <main data-barba="container" data-barba-namespace="home">
+        <div class="grid-layout">
+            <div class="grid-item grid-item-1"><a href="article.html">Click here to test</a></div>
+            <div class="grid-item span-2 grid-item-2">item 2</div>
+            <div class="grid-item span-3 grid-item-3">item 3</div>
+            <div class="grid-item grid-item-4">item 4</div>
+            <div class="grid-item grid-item-5">item 5</div>
+            <div class="grid-item span-2 grid-item-6">item 6</div>
+            <div class="grid-item grid-item-7">item 7</div>
+            <div class="grid-item grid-item-8">item 8</div>
+            <div class="grid-item span-2 grid-item-9">item 9</div>
+        </div>
+    </main>
+</body>
+<script src="https://unpkg.com/headroom.js"></script>
+<script>
+    // headroom.js from https://wicky.nillia.ms/headroom.js/
+    const header = document.querySelector("header");
+    const headroom = new Headroom(header);
+    headroom.init();
+</script>
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+<script>
+    barba.init({
+        transitions: [{
+            name: 'opacity-transition',
+            leave(data) {
+                return gsap.to(data.current.container, {
+                    opacity: 0
+                });
+            },
+            enter(data) {
+                return gsap.from(data.next.container, {
+                    opacity: 0
+                });
+            }
+        }]
+    });
+</script>
+
+</html>
