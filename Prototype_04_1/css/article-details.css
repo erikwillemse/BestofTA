@@ -1,0 +1,86 @@
+/* article styles */
+/* -------------- */
+#article-details {
+    display: grid;
+    margin: 100px auto;
+    grid-template-columns: 2fr 12fr 6fr;
+    grid-gap: 5px 30px;
+}
+
+#article-details>* {
+    grid-column: 2 / -2;
+}
+
+#article-details h4 {
+    color: #504798;
+    font-weight: bold;
+}
+
+#article-details h4.tip {
+    text-transform: uppercase;
+    margin: 40px 0 0px;
+}
+
+#article-details h4.tip::before {
+    content: 'tip';
+    color: #fff;
+    background: var(--main-support-color);
+    padding: 6px 12px;
+    margin-right: 10px;
+}
+
+#article-details h5 {
+    font-size: 1.2em;
+    color: #504798;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: -10px;
+}
+
+#article-details p {
+    font-size: 1.1em;
+}
+
+#article-details p:first-child:first-letter {
+    float: left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.1em;
+    line-height: 50px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+#article-details div.tip {
+    grid-column: span 1 / -1;
+    width: 80%;
+    align-self: start;
+    grid-row: span 3;
+}
+
+#article-details p span.heading {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding-right: 10px;
+}
+
+#article-details p span.heading::before {
+    content: "»";
+    font-size: 2em;
+    font-size: bold;
+}
+
+div.callout {
+    background: var(--sec-support-color);
+    padding: 15px;
+}
+
+img.screenshot {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+p.caption {
+    font-size: 0.8em;
+}
