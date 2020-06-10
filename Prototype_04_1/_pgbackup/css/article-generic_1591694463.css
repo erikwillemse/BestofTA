@@ -4,7 +4,6 @@
     /* colors */
     --main-support-color: #463e8d;
     --sec-support-color: #c1bdde;
-    --main-heading-color: #333;
 
     /* hero background */
     --hero-video-background-display: none;
@@ -27,7 +26,6 @@ body {
     padding: 0px;
 }
 
-header,
 main {
     display: block;
 }
@@ -37,7 +35,8 @@ main {
 /* (based on headroom.js) */
 header {
     height: 100px;
-    background: #fff;
+    background: transparent;
+    display: block;
 }
 
 img.logo {
@@ -288,6 +287,5 @@ main {
     /* For small screens */
     margin: auto;
 
-    /* make room for header */
-    margin-top: 100px;
+    /* Center the container in the viewport */
 }

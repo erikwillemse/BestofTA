@@ -32,7 +32,7 @@ section#hero {
 /* hero headings */
 #article-heading {
     grid-area: hero-heading;
-    padding: 400px 100px 100px 40px;
+    padding: 550px 100px 100px 40px;
 }
 
 #article-heading h1 {

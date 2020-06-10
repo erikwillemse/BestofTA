@@ -4,7 +4,7 @@
 section#hero {
     grid-template-columns: [poster-start] 1fr minmax(300px, 900px) 1fr [poster-end];
     grid-template-rows: [poster-start] auto auto auto auto [poster-end];
-    grid-template-areas: 'hero-label . hero-source' 'hero-heading hero-heading hero-heading' '. hero-intro .' '. hero-credits .';
+    grid-template-areas: 'hero-label . hero-source' '. hero-heading .' '. hero-intro .' '. hero-credits .';
     display: grid;
 }
 
@@ -32,7 +32,7 @@ section#hero {
 /* hero headings */
 #article-heading {
     grid-area: hero-heading;
-    padding: 400px 100px 100px 40px;
+    padding: 180px 40px 40px 40px;
 }
 
 #article-heading h1 {

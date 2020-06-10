@@ -1,10 +1,10 @@
 /* generic styles */
 /* -------------- */
+
 :root {
     /* colors */
     --main-support-color: #463e8d;
     --sec-support-color: #c1bdde;
-    --main-heading-color: #333;
 
     /* hero background */
     --hero-video-background-display: none;
@@ -17,6 +17,7 @@
     --credits-illustrations: "Illustraties ";
 
     /* fonts: see article-typograhy.css */
+
 }
 
 html {
@@ -27,17 +28,16 @@ body {
     padding: 0px;
 }
 
-header,
-main {
-    display: block;
-}
-
 /* header logo and hamburger navigation */
 /* ------------------------------------ */
 /* (based on headroom.js) */
 header {
     height: 100px;
-    background: #fff;
+    background: transparent;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    grid-template-areas: 'logo . hamburger';
 }
 
 img.logo {
@@ -288,6 +288,5 @@ main {
     /* For small screens */
     margin: auto;
 
-    /* make room for header */
-    margin-top: 100px;
+    /* Center the container in the viewport */
 }

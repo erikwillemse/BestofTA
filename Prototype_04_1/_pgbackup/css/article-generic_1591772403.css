@@ -288,6 +288,5 @@ main {
     /* For small screens */
     margin: auto;
 
-    /* make room for header */
-    margin-top: 100px;
+    /* Center the container in the viewport */
 }
